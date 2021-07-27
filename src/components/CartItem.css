@@ -1,0 +1,30 @@
+.cart-item-container {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(226 242 242);
+}
+
+.item-image {
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.item-description {
+  margin-right: 20%;
+}
+.item-description > h3 {
+  margin-bottom: 3px;
+}
+.item-description > span {
+  display: block;
+  font-size: 1rem;
+}
+.item-description > div {
+  margin: 5px 5px 0 0;
+}
+
+.f1 {
+  font-size: 1.5rem;
+}
