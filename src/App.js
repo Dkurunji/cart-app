@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import CartList from "./components/CartList";
 import SubTotal from "./components/SubTotal";
+import Store from "./components/Store";
 
 const items = [
   {
@@ -37,9 +38,8 @@ class App extends React.Component{
        this.setState({
            products,
        })
-        
-
-    } 
+    }
+    
     decrementQtyHandler = (product) => {
       const {products} = this.state;
       const index = products.indexOf(product);
@@ -91,11 +91,12 @@ class App extends React.Component{
     render() {       
         
         return (
-          <div>
+            <div>
                 <Navbar count={this.getTotalQty()}/>
                 <CartList products={this.state.products} onIncrementQty={this.incrementQtyHandler} onDecrementQty={this.decrementQtyHandler} onDelete={this.deleteItemHandler}/>
                 {this.getTotal() > 0 && <SubTotal subTotal={this.getTotal()} />}
                 {this.state.products.length===0 && <h1 style={styles}>Cart is Empty!!</h1>}
+                {/* <Store/> */}
             </div>
        )
    }
